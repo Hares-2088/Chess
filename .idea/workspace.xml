@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="56f4ebeb-da4a-4412-b855-eb644b3cf77d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chess.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bishop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chessman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/King.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Knight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pawn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Queen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rook.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MIXAMNpCQxLWFVZkEx9mrep3UK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56f4ebeb-da4a-4412-b855-eb644b3cf77d" name="Changes" comment="" />
+      <created>1677455930309</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677455930309</updated>
+      <workItem from="1677455933430" duration="166000" />
+      <workItem from="1677606939252" duration="4817000" />
+      <workItem from="1677810108958" duration="4659000" />
+      <workItem from="1677870535245" duration="207000" />
+      <workItem from="1677874328674" duration="115000" />
+      <workItem from="1677886853086" duration="838000" />
+      <workItem from="1678062130727" duration="3726000" />
+      <workItem from="1678118679666" duration="3358000" />
+      <workItem from="1678193109954" duration="697000" />
+      <workItem from="1678383593053" duration="3694000" />
+      <workItem from="1678406987146" duration="4092000" />
+      <workItem from="1678795879279" duration="1000" />
+      <workItem from="1678800774035" duration="299000" />
+      <workItem from="1678805799965" duration="2135000" />
+      <workItem from="1678843363028" duration="4219000" />
+      <workItem from="1678908968870" duration="342000" />
+      <workItem from="1678984849798" duration="1763000" />
+      <workItem from="1678989756774" duration="103000" />
+      <workItem from="1679096719963" duration="8651000" />
+      <workItem from="1679245054530" duration="788000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Movement.java" line="50">
+        <watch expression="whitePawns.get(p).getName()" />
+      </inline-watch>
+    </watches-manager>
+  </component>
+</project>
