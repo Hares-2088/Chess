@@ -79,7 +79,8 @@ public class Game {
                 System.out.println("What is the name of the piece that you want to move: ");
                 pieceName = sc.nextLine();
             }
-        }
+            System.out.println(movement.getPiece(pieceName, whitePawns, blackPawns, whiteKnights, blackKnights, whiteBishops, blackBishops, whiteRooks, blackRooks, whiteQueen, blackQueen, whiteKing, blackKing));
+            }
 
+        }
     }
-}

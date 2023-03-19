@@ -38,10 +38,11 @@ public class Movement {
         this.PositionY = newPositionY;
     }
 
-    public String[] getPiece(String name, ArrayList<Pawn> whitePawns, ArrayList<Pawn> blackPawns, ArrayList<Knight> whiteKnights, ArrayList<Knight> blackKnights, ArrayList<Bishop> whiteBishops, ArrayList<Bishop> blackBishops, ArrayList<Rook> whiteRooks, ArrayList<Rook> blackRooks, ArrayList<Queen> blackQueen, ArrayList<Queen> whiteQueen, ArrayList<King> blackKing, ArrayList<King> whiteKing) {
+    public Object getPiece(String name, ArrayList<Pawn> whitePawns, ArrayList<Pawn> blackPawns, ArrayList<Knight> whiteKnights, ArrayList<Knight> blackKnights, ArrayList<Bishop> whiteBishops, ArrayList<Bishop> blackBishops, ArrayList<Rook> whiteRooks, ArrayList<Rook> blackRooks, ArrayList<Queen> blackQueen, ArrayList<Queen> whiteQueen, ArrayList<King> blackKing, ArrayList<King> whiteKing) {
         int[] position = {10, 10};
         String chessmanType = null;
         String chessmanColor = null;
+        Object chessman = null;
 
         for (int row = 0; row < 8; row++) {
             //Check Pawns
@@ -54,6 +55,7 @@ public class Movement {
                         position[1] = whitePawns.get(p).getPositionY();
                         chessmanType = "Pawn";
                         chessmanColor = "White";
+                        chessman = whitePawns.get(p);
                     } else
                         return null;
                 }
@@ -66,6 +68,7 @@ public class Movement {
                         position[1] = blackPawns.get(p).getPositionY();
                         chessmanType = "Pawn";
                         chessmanColor = "Black";
+                        chessman = blackPawns.get(p);
                     } else
                         return null;
                 }
@@ -79,6 +82,7 @@ public class Movement {
                         position[1] = whiteKnights.get(k).getPositionY();
                         chessmanType = "Knight";
                         chessmanColor = "White";
+                        chessman = whiteKnights.get(k);
                     } else
                         return null;
                 }
@@ -90,6 +94,7 @@ public class Movement {
                         position[1] = blackKnights.get(k).getPositionY();
                         chessmanType = "Knight";
                         chessmanColor = "Black";
+                        chessman = blackKnights.get(k);
                     } else
                         return null;
                 }
@@ -101,6 +106,7 @@ public class Movement {
                         position[1] = whiteBishops.get(k).getPositionY();
                         chessmanType = "Bishop";
                         chessmanColor = "White";
+                        chessman = whiteBishops.get(k);
                     } else
                         return null;
                 }
@@ -112,6 +118,7 @@ public class Movement {
                         position[1] = blackBishops.get(k).getPositionY();
                         chessmanType = "Bishop";
                         chessmanColor = "Black";
+                        chessman = blackBishops.get(k);
                     } else
                         return null;
                 }
@@ -123,6 +130,7 @@ public class Movement {
                         position[1] = whiteRooks.get(k).getPositionY();
                         chessmanType = "Rook";
                         chessmanColor = "White";
+                        chessman = whiteRooks.get(k);
                     } else
                         return null;
                 }
@@ -135,6 +143,7 @@ public class Movement {
                         position[1] = blackRooks.get(k).getPositionY();
                         chessmanType = "Rook";
                         chessmanColor = "Black";
+                        chessman = blackRooks.get(k);
                     } else
                         return null;
                 }
@@ -143,10 +152,11 @@ public class Movement {
             //Check White Queen
             if (whiteQueen.get(0).getName().equalsIgnoreCase(name)) {
                 if (whiteQueen.get(0).isAlive()) {
-                    position[0] = whiteKnights.get(0).getPositionX();
-                    position[1] = whiteKnights.get(0).getPositionY();
+                    position[0] = whiteQueen.get(0).getPositionX();
+                    position[1] = whiteQueen.get(0).getPositionY();
                     chessmanType = "Queen";
                     chessmanColor = "White";
+                    chessman = whiteQueen.get(0);
                 } else
                     return null;
             }
@@ -162,17 +172,19 @@ public class Movement {
                     return null;
             }
             if (whiteKing.get(0).getName().equalsIgnoreCase(name)) {
-                position[0] = blackQueen.get(0).getPositionX();
-                position[1] = blackQueen.get(0).getPositionY();
+                position[0] = whiteKing.get(0).getPositionX();
+                position[1] = whiteKing.get(0).getPositionY();
                 chessmanType = "King";
                 chessmanColor = "White";
+                chessman = whiteKing.get(0);
             }
             //Check Black King
             if (blackKing.get(0).getName().equalsIgnoreCase(name)) {
-                position[0] = blackQueen.get(0).getPositionX();
-                position[1] = blackQueen.get(0).getPositionY();
+                position[0] = blackKing.get(0).getPositionX();
+                position[1] = blackKing.get(0).getPositionY();
                 chessmanType = "King";
                 chessmanColor = "Black";
+                chessman = blackKing.get(0);
             }
 
         }
@@ -200,137 +212,7 @@ public class Movement {
         if (position[0] == 10) {
             return null;
         } else
-            return splitData;
+            return chessman;
     }
 
-    //Get the index of the white pawn
-    public int getObjectWhitePawn(ArrayList<Pawn> whitePawns) {
-        int index = 0;
-        for (int i = 0; i < whitePawns.size(); i++) {
-            if (whitePawns.get(i).getPositionX() == getPositionX() && whitePawns.get(i).getPositionY() == getPositionY()) {
-                index = i;
-            }
-        }
-        return index;
-    }
-
-    public int getObjectBlackPawn(ArrayList<Pawn> blackPawns) {
-        int index = 0;
-        for (int i = 0; i < blackPawns.size(); i++) {
-            if (blackPawns.get(i).getPositionX() == getPositionX() && blackPawns.get(i).getPositionY() == getPositionY()) {
-                index = i;
-            }
-        }
-        return index;
-    }
-
-    public int getObjectWhiteRook(ArrayList<Rook> whiteRook) {
-        int index = 0;
-        for (int i = 0; i < whiteRook.size(); i++) {
-            if (whiteRook.get(i).getPositionX() == getPositionX() && whiteRook.get(i).getPositionY() == getPositionY()) {
-                index = i;
-            }
-        }
-        return index;
-    }
-
-    public int getObjectBlackRook(ArrayList<Rook> blackRook) {
-        int index = 0;
-        for (int i = 0; i < blackRook.size(); i++) {
-            if (blackRook.get(i).getPositionX() == getPositionX() && blackRook.get(i).getPositionY() == getPositionY()) {
-                index = i;
-            }
-        }
-        return index;
-    }
-
-    public int getObjectWhiteKnight(ArrayList<Knight> whiteKnight) {
-        int index = 0;
-        for (int i = 0; i < whiteKnight.size(); i++) {
-            if (whiteKnight.get(i).getPositionX() == getPositionX() && whiteKnight.get(i).getPositionY() == getPositionY()) {
-                index = i;
-            }
-        }
-        return index;
-    }
-
-    public int getObjectBlackKnight(ArrayList<Knight> blackKnight) {
-        int index = 0;
-        for (int i = 0; i < blackKnight.size(); i++) {
-            if (blackKnight.get(i).getPositionX() == getPositionX() && blackKnight.get(i).getPositionY() == getPositionY()) {
-                index = i;
-            }
-        }
-        return index;
-    }
-
-    public int getObjectWhiteBishop(ArrayList<Bishop> whiteBishop) {
-        int index = 0;
-        for (int i = 0; i < whiteBishop.size(); i++) {
-            if (whiteBishop.get(i).getPositionX() == getPositionX() && whiteBishop.get(i).getPositionY() == getPositionY()) {
-                index = i;
-            }
-        }
-        return index;
-    }
-
-    public int getObjectBlackBishop(ArrayList<Bishop> blackBishop) {
-        int index = 0;
-        for (int i = 0; i < blackBishop.size(); i++) {
-            if (blackBishop.get(i).getPositionX() == getPositionX() && blackBishop.get(i).getPositionY() == getPositionY()) {
-                index = i;
-            }
-        }
-        return index;
-    }
-
-    //A method that will find the index
-    public int getIndex(ArrayList<Pawn> whitePawns, ArrayList<Pawn> blackPawns, ArrayList<Knight> whiteKnights, ArrayList<Knight> blackKnights, ArrayList<Bishop> whiteBishops, ArrayList<Bishop> blackBishops, ArrayList<Rook> whiteRooks, ArrayList<Rook> blackRooks, ArrayList<Queen> blackQueen, ArrayList<Queen> whiteQueen, ArrayList<King> blackKing, ArrayList<King> whiteKing) {
-        int index = 0;
-        String name = getName();
-        String color = getColor();
-        //Pawn
-        if (name.equalsIgnoreCase("Pawn") && color.equalsIgnoreCase("white")) {
-            index = getObjectWhitePawn(whitePawns);
-        }
-        if (name.equalsIgnoreCase("Pawn") && color.equalsIgnoreCase("black")) {
-            index = getObjectBlackPawn(blackPawns);
-        }
-        //Rook
-        if (name.equalsIgnoreCase("rook") && color.equalsIgnoreCase("white")) {
-            index = getObjectWhiteRook(whiteRooks);
-        }
-        if (name.equalsIgnoreCase("rook") && color.equalsIgnoreCase("black")) {
-            index = getObjectBlackRook(blackRooks);
-        }
-        //Knight
-        if (name.equalsIgnoreCase("Knight") && color.equalsIgnoreCase("white")) {
-            index = getObjectWhiteKnight(whiteKnights);
-        }
-        if (name.equalsIgnoreCase("Knight") && color.equalsIgnoreCase("black")) {
-            index = getObjectBlackKnight(blackKnights);
-        }
-        //Bishop
-        if (name.equalsIgnoreCase("Bishop") && color.equalsIgnoreCase("white")) {
-            index = getObjectWhiteBishop(whiteBishops);
-        }
-        if (name.equalsIgnoreCase("Bishop") && color.equalsIgnoreCase("black")) {
-            index = getObjectBlackBishop(blackBishops);
-        }
-        //Queen
-        if (name.equalsIgnoreCase("Queen") && color.equalsIgnoreCase("white")){
-            index = 0;
-        }
-        if (name.equalsIgnoreCase("Queen") && color.equalsIgnoreCase("black")){
-            index = 0;
-        }
-        //King
-        if (name.equalsIgnoreCase("King") && color.equalsIgnoreCase("white")){
-            index = 0;
-        }
-        if (name.equalsIgnoreCase("King") && color.equalsIgnoreCase("black")){
-            index = 0;
-        }
-        return index;
-    }
 }
