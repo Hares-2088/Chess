@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Game {
     public static void main(String[] args) {
-        int x; //for the x position of the pieces
-        int y; //for the y position of the pieces
+
+        String pieceName;
 
         Board board = new Board();
         Pawn pawn = new Pawn();
@@ -72,15 +72,15 @@ public class Game {
 
             //Asking the user the name of the piece
             System.out.println("What is the name of the piece that you want to move: ");
-            String pieceName = sc.nextLine();
+            pieceName = sc.nextLine();
 
+            //Check if the piece is still alive and ask the user to give an alive one until true
             while (movement.getPiece(pieceName, whitePawns, blackPawns, whiteKnights, blackKnights, whiteBishops, blackBishops, whiteRooks, blackRooks, whiteQueen, blackQueen, whiteKing, blackKing) == null) {
                 System.out.println("This piece does not exit or is dead");
                 System.out.println("What is the name of the piece that you want to move: ");
                 pieceName = sc.nextLine();
             }
-            System.out.println(movement.getPiece(pieceName, whitePawns, blackPawns, whiteKnights, blackKnights, whiteBishops, blackBishops, whiteRooks, blackRooks, whiteQueen, blackQueen, whiteKing, blackKing));
-            }
-
         }
+
     }
+}

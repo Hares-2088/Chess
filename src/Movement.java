@@ -6,6 +6,25 @@ public class Movement {
     private int PositionX;
     private int PositionY;
 
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    private int index;
+    private Object chessman;
+
+    public Object getChessman() {
+        return chessman;
+    }
+
+    public void setChessman(Object chessman) {
+        this.chessman = chessman;
+    }
+
     public String getColor() {
         return color;
     }
@@ -40,6 +59,7 @@ public class Movement {
 
     public Object getPiece(String name, ArrayList<Pawn> whitePawns, ArrayList<Pawn> blackPawns, ArrayList<Knight> whiteKnights, ArrayList<Knight> blackKnights, ArrayList<Bishop> whiteBishops, ArrayList<Bishop> blackBishops, ArrayList<Rook> whiteRooks, ArrayList<Rook> blackRooks, ArrayList<Queen> blackQueen, ArrayList<Queen> whiteQueen, ArrayList<King> blackKing, ArrayList<King> whiteKing) {
         int[] position = {10, 10};
+        int index = 0;
         String chessmanType = null;
         String chessmanColor = null;
         Object chessman = null;
@@ -56,6 +76,7 @@ public class Movement {
                         chessmanType = "Pawn";
                         chessmanColor = "White";
                         chessman = whitePawns.get(p);
+                        index = p;
                     } else
                         return null;
                 }
@@ -69,6 +90,7 @@ public class Movement {
                         chessmanType = "Pawn";
                         chessmanColor = "Black";
                         chessman = blackPawns.get(p);
+                        index = p;
                     } else
                         return null;
                 }
@@ -83,6 +105,7 @@ public class Movement {
                         chessmanType = "Knight";
                         chessmanColor = "White";
                         chessman = whiteKnights.get(k);
+                        index = k;
                     } else
                         return null;
                 }
@@ -95,6 +118,7 @@ public class Movement {
                         chessmanType = "Knight";
                         chessmanColor = "Black";
                         chessman = blackKnights.get(k);
+                        index = k;
                     } else
                         return null;
                 }
@@ -107,6 +131,7 @@ public class Movement {
                         chessmanType = "Bishop";
                         chessmanColor = "White";
                         chessman = whiteBishops.get(k);
+                        index = k;
                     } else
                         return null;
                 }
@@ -119,6 +144,7 @@ public class Movement {
                         chessmanType = "Bishop";
                         chessmanColor = "Black";
                         chessman = blackBishops.get(k);
+                        index = k;
                     } else
                         return null;
                 }
@@ -131,6 +157,7 @@ public class Movement {
                         chessmanType = "Rook";
                         chessmanColor = "White";
                         chessman = whiteRooks.get(k);
+                        index = k;
                     } else
                         return null;
                 }
@@ -144,6 +171,7 @@ public class Movement {
                         chessmanType = "Rook";
                         chessmanColor = "Black";
                         chessman = blackRooks.get(k);
+                        index = k;
                     } else
                         return null;
                 }
@@ -157,6 +185,7 @@ public class Movement {
                     chessmanType = "Queen";
                     chessmanColor = "White";
                     chessman = whiteQueen.get(0);
+                    index = 0;
                 } else
                     return null;
             }
@@ -168,6 +197,8 @@ public class Movement {
                     position[1] = blackQueen.get(0).getPositionY();
                     chessmanType = "Queen";
                     chessmanColor = "Black";
+                    chessman = blackQueen.get(0);
+                    index = 0;
                 } else
                     return null;
             }
@@ -177,6 +208,7 @@ public class Movement {
                 chessmanType = "King";
                 chessmanColor = "White";
                 chessman = whiteKing.get(0);
+                index = 0;
             }
             //Check Black King
             if (blackKing.get(0).getName().equalsIgnoreCase(name)) {
@@ -185,34 +217,37 @@ public class Movement {
                 chessmanType = "King";
                 chessmanColor = "Black";
                 chessman = blackKing.get(0);
+                index = 0;
             }
-
         }
-        String positionX = String.valueOf(position[0]);
-        String positionY = String.valueOf(position[1]);
-        String pieceData = chessmanColor + "," + chessmanType + "," + positionX + "," + positionY;
-        String[] splitData = pieceData.split(",");
 
         // Set the color
-        String pieceColor = splitData[0];
+        String pieceColor = chessmanColor;
         setColor(pieceColor);
 
         // Set the name
-        String pieceName = splitData[1];
+        String pieceName = chessmanType;
         setName(pieceName);
 
         // Set the final x position
-        int finalPositionX = Integer.parseInt(splitData[2]);
+        int finalPositionX =position[0];
         setPositionX(finalPositionX);
 
         // Set the final y position
-        int finalPositionY = Integer.parseInt(splitData[3]);
+        int finalPositionY = position[1];
         setPositionY(finalPositionY);
+
+        //Set the index of the array
+        setIndex(index);
+
+        //Set the object
+        setChessman(chessman);
 
         if (position[0] == 10) {
             return null;
         } else
             return chessman;
     }
+
 
 }

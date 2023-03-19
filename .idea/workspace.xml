@@ -119,7 +119,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Object_return_type" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -137,7 +137,7 @@
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Movement.java" line="51">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Movement.java" line="71">
         <watch expression="whitePawns.get(p).getName()" />
       </inline-watch>
     </watches-manager>
