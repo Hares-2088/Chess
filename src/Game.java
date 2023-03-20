@@ -75,7 +75,7 @@ public class Game {
             pieceName = sc.nextLine();
 
             //Check if the piece is still alive and ask the user to give an alive one until true
-            while (movement.getPiece(pieceName, whitePawns, blackPawns, whiteKnights, blackKnights, whiteBishops, blackBishops, whiteRooks, blackRooks, whiteQueen, blackQueen, whiteKing, blackKing) == null) {
+            while (movement.getPieceByName(pieceName, whitePawns, blackPawns, whiteKnights, blackKnights, whiteBishops, blackBishops, whiteRooks, blackRooks, whiteQueen, blackQueen, whiteKing, blackKing) == null) {
                 System.out.println("This piece does not exit or is dead");
                 System.out.println("What is the name of the piece that you want to move: ");
                 pieceName = sc.nextLine();

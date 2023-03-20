@@ -78,6 +78,8 @@
       <workItem from="1678989756774" duration="103000" />
       <workItem from="1679096719963" duration="8651000" />
       <workItem from="1679245054530" duration="2163000" />
+      <workItem from="1679320438730" duration="183000" />
+      <workItem from="1679325468379" duration="1942000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1679245911239</created>
@@ -86,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679245911239</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ok">
+      <created>1679249297133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679249297133</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +146,7 @@
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Movement.java" line="71">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Movement.java" line="70">
         <watch expression="whitePawns.get(p).getName()" />
       </inline-watch>
     </watches-manager>
