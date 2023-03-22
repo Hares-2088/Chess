@@ -56,9 +56,6 @@ public abstract class Chessman {
         this.name = name;
     }
 
-    //Abstract method to move the chess men
-    public abstract void move(int x, int y);
-
 
     @Override
     public String toString() {

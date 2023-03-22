@@ -448,4 +448,37 @@ public class Movement {
             return chessman;
     }
 
+    public void pawnMovement(int turn, int nextX, int nextY) {
+        Pawn pawn = (Pawn) getMovingChessman();
+        if (nextX == getPositionX() && nextY == (getPositionY() + 1)) {
+            pawn.setPositionY(nextY);
+            pawn.setPositionX(nextX);
+        } else if ((turn == 1) && nextX == getPositionX() && nextY == (getPositionY() + 2)) {
+            pawn.setPositionY(nextY);
+            pawn.setPositionX(nextX);
+        }
+    }
+
+    public void move(int turn, int nextX, int nextY) {
+        if (getName().equalsIgnoreCase("blackPawn") || getName().equalsIgnoreCase("whitePawn")) {
+            pawnMovement(turn, nextX, nextY);
+        }
+        if (getName().equalsIgnoreCase("blackRook") || getName().equalsIgnoreCase("whiteRook")) {
+            pawnMovement(turn, nextX, nextY);
+        }
+        if (getName().equalsIgnoreCase("blackKnight") || getName().equalsIgnoreCase("whiteKnight")) {
+            pawnMovement(turn, nextX, nextY);
+        }
+        if (getName().equalsIgnoreCase("blackBishop") || getName().equalsIgnoreCase("whiteBishop")) {
+            pawnMovement(turn, nextX, nextY);
+        }
+        if (getName().equalsIgnoreCase("blackQueen") || getName().equalsIgnoreCase("whiteQueen")) {
+            pawnMovement(turn, nextX, nextY);
+        }
+        if (getName().equalsIgnoreCase("blackKing") || getName().equalsIgnoreCase("whiteKing")) {
+            pawnMovement(turn, nextX, nextY);
+        }
+    }
+
+
 }

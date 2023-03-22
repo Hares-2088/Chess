@@ -6,10 +6,6 @@ public class King extends Chessman{
     }
     public King(){
     }
-    @Override
-    public void move(int x, int y) {
-
-    }
     public void createWhiteKing(ArrayList<King> king) {
         King WK1 = new King(4, 7, true, "white", "WKING");
         king.add(WK1);

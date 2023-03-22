@@ -7,9 +7,6 @@ public class Bishop extends Chessman{
     public Bishop(){
     }
 
-    @Override
-    public void move(int x, int y) {
-    }
     public void createWhiteBishops(ArrayList<Bishop> bishops) {
         bishops.add(new Bishop(2, 7, true, "white", "WB1"));
         bishops.add(new Bishop(5, 7, true, "white", "WB2"));

@@ -6,11 +6,6 @@ public class Rook extends Chessman{
     }
     public Rook(){}
 
-    @Override
-    public void move(int x, int y) {
-
-    }
-
     public void createWhiteRooks(ArrayList<Rook> rook) {
         Rook WR1 = new Rook(0, 7, true, "white", "WR1");
         rook.add(WR1);

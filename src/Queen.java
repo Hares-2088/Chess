@@ -6,11 +6,6 @@ public class Queen extends Chessman{
     }
     public Queen(){
     }
-
-    @Override
-    public void move(int x, int y) {
-
-    }
     public void createWhiteQueen(ArrayList<Queen> queen) {
         Queen WQ1 = new Queen(3, 7, true, "white", "WQ");
         queen.add(WQ1);

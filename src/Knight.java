@@ -7,11 +7,6 @@ public class Knight extends Chessman {
     public Knight(){
     }
 
-    @Override
-    public void move(int x, int y) {
-
-    }
-
     public void createWhiteKnights(ArrayList<Knight> knights) {
         Knight WK1 = new Knight(1, 7, true, "white", "WK1");
         knights.add(WK1);

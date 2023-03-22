@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56f4ebeb-da4a-4412-b855-eb644b3cf77d" name="Changes" comment="ok">
+    <list default="true" id="56f4ebeb-da4a-4412-b855-eb644b3cf77d" name="Changes" comment="create a get piece by position">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chessman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chessman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +86,9 @@
       <workItem from="1679096719963" duration="8651000" />
       <workItem from="1679245054530" duration="2163000" />
       <workItem from="1679320438730" duration="183000" />
-      <workItem from="1679325468379" duration="1942000" />
+      <workItem from="1679325468379" duration="5709000" />
+      <workItem from="1679400408639" duration="4000" />
+      <workItem from="1679519904640" duration="526000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1679245911239</created>
@@ -95,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679249297133</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create a get piece by position">
+      <created>1679327617760</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679327617760</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +144,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="Object_return_type" />
                       </list>
                     </value>
                   </entry>
@@ -142,7 +158,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="create a get piece by position" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a get piece by position" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

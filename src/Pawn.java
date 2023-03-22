@@ -6,11 +6,7 @@ public class Pawn extends Chessman{
     }
     public Pawn(){}
 
-    @Override
-    public void move(int x, int y) {
-        setPositionX(x);
-        setPositionY(y);
-    }
+
     public void createWhitePawns(Board board, ArrayList<Pawn> pawns) {
         for (int i = 0; i < board.getBoardPositions().length; i++) {
             int nameNum = i+1;

@@ -65,6 +65,7 @@ public class Game {
         ArrayList<King> blackKing = new ArrayList<>();
         king.createBlackKing(blackKing);
 
+        int turn=1;
         while (true) {
             //Printing the board
             board.printBoard(whitePawns, blackPawns, whiteKnights, blackKnights, whiteBishops, blackBishops, whiteRooks, blackRooks,
@@ -80,7 +81,43 @@ public class Game {
                 System.out.println("What is the name of the piece that you want to move: ");
                 pieceName = sc.nextLine();
             }
+            System.out.println("Where do you want to move it: (ex:G5)");
+            String nextPosition = sc.nextLine();
+            String
+            movement.move(turn, );
         }
 
+    }
+    public static int getNumberFromLetter(String upperCaseLetter){
+        String lowerLetter = upperCaseLetter.toLowerCase();
+        char letter = lowerLetter.charAt(0);
+        int index = 0;
+        switch (letter){
+            case 'a':
+                index = 0;
+                break;
+            case 'b':
+                index = 1;
+                break;
+            case 'c':
+                index = 2;
+                break;
+            case 'd':
+                index = 3;
+                break;
+            case 'e':
+                index = 4;
+                break;
+            case 'f':
+                index = 5;
+                break;
+            case 'g':
+                index = 6;
+                break;
+            case 'h':
+                index = 7;
+                break;
+        }
+        return index;
     }
 }
