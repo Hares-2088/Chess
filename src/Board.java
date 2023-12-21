@@ -19,7 +19,7 @@ public class Board {
     public void printBoard(ArrayList<Pawn> whitePawns, ArrayList<Pawn> blackPawns, ArrayList<Knight> whiteKnights, ArrayList<Knight> blackKnights, ArrayList<Bishop> whiteBishops, ArrayList<Bishop> blackBishops, ArrayList<Rook> whiteRooks, ArrayList<Rook> blackRooks, ArrayList<Queen> blackQueen, ArrayList<Queen> whiteQueen, ArrayList<King> blackKing, ArrayList<King> whiteKing) {
         //Create an Array to hold the letters
         char[] letters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
-        int[] numbers = {1,2,3,4,5,6,7,8};
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8};
         //Associate the name with the board index
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
@@ -82,19 +82,18 @@ public class Board {
         }
         //Put the number
         System.out.print("      ");
-        for (int i= 0; i<8; i++){
-            if (i ==7){
+        for (int i = 0; i < 8; i++) {
+            if (i == 7) {
                 System.out.println(numbers[i]);
                 System.out.println();
-            }
-            else {
+            } else {
                 System.out.printf("%-10d", numbers[i]);
             }
         }
         //Print the board
         for (int row = 0; row < boardPositions.length; row++) {
             //put the letters
-            System.out.print(letters[row]+ "    ");
+            System.out.print(letters[row] + "    ");
             for (int col = 0; col < boardPositions[row].length; col++) {
                 if (boardPositions[row][col] == null) {
                     System.out.printf("%-10s", "Blank");
@@ -107,13 +106,18 @@ public class Board {
         }
         //Put the number
         System.out.print("      ");
-        for (int i= 0; i<8; i++){
-            if (i ==7){
+        for (int i = 0; i < 8; i++) {
+            if (i == 7) {
                 System.out.println(numbers[i]);
-            }
-            else {
+            } else {
                 System.out.printf("%-10d", numbers[i]);
             }
+        }
+        for (int row = 0; row < 8; row++) {
+            for (int col = 0; col < 8; col++) {
+                boardPositions[row][col] = null;
+            }
+
         }
     }
 }
